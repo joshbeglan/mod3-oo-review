@@ -21,13 +21,7 @@ ella = Cat.new("Ella", 8)
  => #<Cat:0x00007fa386a63390 @name="Ella", @age=8> 
 ```
 
-All cats should have some **behavior**. Define a method called `name` that returns the name of the cat 
-```ruby
-ella.name
- => "Ella" 
-```
-
-Next, define a method called `meow` that returns the string `"meeoowwww"`.
+All cats should have some **behavior**. Define a method called `meow` that returns the string `"meeoowwww"`.
 ```ruby
 ella.meow
  => "meeoowwww" 
@@ -92,8 +86,6 @@ You can scroll down for the answer after you have attempted the solution.
 
 ```ruby
 class Cat
-  attr_reader :name 
-
   def initialize(name, age)
     @name = name 
     @age = age 
@@ -104,8 +96,42 @@ class Cat
   end 
 
   def greet
-    "Hi, my name is #{self.name}! #{self.meow}"
+    "Hi, my name is #{@name}! #{self.meow}"
   end 
 end 
+
+ella = Cat.new("Ella", 8)
+ella.greet
 ```
+
+The JavaScript equivalent is very similar
+
+```js
+class Cat {
+  constructor(name, age){
+    this.name = name 
+    this.age = age 
+  }
+
+  meow(){
+    return "meeoowwww"
+  }
+
+  greet(){
+    return `Hi, my name is ${this.name}! ${this.meow()}`
+  }
+}
+
+ella = new Cat("Ella", 8)
+ella.greet()
+```
+
+Key differences to take away:
+* There are no `def` or `end`, just `{` and `}`
+* In JavaScript, you MUST use `()` to invoke methods and you MUST have an explicit `return`
+* Instead of `inistialize`, we have `constructor`. These two methods serve the same purpose. 
+
+Lastly, we see the keyword `this` alot. Instead of `@name = name`, we see `this.name = name`. And instead of `self.meow`, we see `this.meow()`
+
+The keyword `this` is a very strange concept that can take on lots of different meanings and use cases, so we will need to dig a little deeper into [`this`](https://github.com/thuyanduong-flatiron/this) before digging into Object Oriented JS.
 
