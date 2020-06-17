@@ -33,8 +33,82 @@ ella.meow
  => "meeoowwww" 
 ```
 
-Finally, define a method called `greet` that returns a string of `Hello, my name is`, cat's name in it, and the return of the `meow` method.
+Finally, define a method called `greet` that returns a string of `Hello, my name is`, cat's name, and then the string returned by the `meow` method.
 ```ruby
 ella.greet
  => "Hi, my name is Ella! meeoowwww" 
 ```
+
+You can scroll down for the answer after you have attempted the solution.
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+### Solution: 
+
+```ruby
+class Cat
+  attr_reader :name 
+
+  def initialize(name, age)
+    @name = name 
+    @age = age 
+  end 
+
+  def meow
+    "meeoowwww"
+  end 
+
+  def greet
+    "Hi, my name is #{self.name}! #{self.meow}"
+  end 
+end 
+```
+
