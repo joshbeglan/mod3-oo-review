@@ -129,7 +129,7 @@ ella.greet()
 Key differences to take away:
 * There are no `def` or `end`, just `{` and `}`
 * In JavaScript, you MUST use `()` to invoke methods and you MUST have an explicit `return`
-* Instead of `inistialize`, we have `constructor`. These two methods serve the same purpose. 
+* Instead of `initialize`, we have `constructor`. These two methods serve the same purpose. 
 
 Lastly, we see the keyword `this` alot. Instead of `@name = name`, we see `this.name = name`. And instead of `self.meow`, we see `this.meow()`
 
