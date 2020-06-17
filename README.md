@@ -16,17 +16,25 @@ Create a `Cat` class in ruby.
 
 All cats should have some data: a name and an age. 
 
-> ella = Cat.new("Ella", 8)
-> => #<Cat:0x00007fa386a63390 @name="Ella", @age=8> 
+```ruby
+ella = Cat.new("Ella", 8)
+ => #<Cat:0x00007fa386a63390 @name="Ella", @age=8> 
+```
 
 All cats should have some **behavior**. Define a method called `name` that returns the name of the cat 
-> ella.name
-> => "Ella" 
+```ruby
+ella.name
+ => "Ella" 
+```
 
 Next, define a method called `meow` that returns the string `"meeoowwww"`.
-> ella.meow
-> => "meeoowwww" 
+```ruby
+ella.meow
+ => "meeoowwww" 
+```
 
 Finally, define a method called `greet` that returns a string of `Hello, my name is`, cat's name in it, and the return of the `meow` method.
-> ella.greet
-> => "Hi, my name is Ella! meeoowwww" 
+```ruby
+ella.greet
+ => "Hi, my name is Ella! meeoowwww" 
+```
